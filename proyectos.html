@@ -43,5 +43,16 @@ images.forEach(img => {
     }
   }
 });
+</script><script>
+const images = document.querySelectorAll('img');
+images.forEach(img => {
+  if (img.hasAttribute('alt')) {
+    const altText = img.getAttribute('alt');
+    const nextDiv = img.nextElementSibling;
+    if (nextDiv && nextDiv.tagName === 'DIV') {
+      nextDiv.innerText = altText;
+    }
+  }
+});
 </script>
 </body></html>
